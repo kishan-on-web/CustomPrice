@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Custom_Price" translate="label" sortOrder="10">
+            <label>Custom Price</label>
+        </tab>
+        <section id="kk_customprice" translate="label" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>KK's Price</label>
+            <tab>Custom_Price</tab>
+            <resource>KK_CustomPrice::config</resource>
+            <group id="general" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1">
+
+                <label> KK's Custom Price</label>
+
+                <field id="custom_price" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Price</label>
+                </field>
+
+                <field id="enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
